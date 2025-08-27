@@ -13,10 +13,33 @@
 <body class="bg-white text-gray-900">
 
     <!-- Top Banner -->
-    <div class="w-full bg-gradient-to-r from-blue-900 to-indigo-800 text-white text-center text-xs sm:text-sm py-2">
-        📢 Welcome to SPT Capital Firm — Learn Forex the Smart Way
+    <!-- Professional Top Banner with Features -->
+    <div class="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white shadow">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between">
+            <!-- Left: Brand/Tagline -->
+            <span class="text-sm sm:text-base font-medium tracking-wide">
+                SPT Capital — Professional Market Insights & Investment Strategies
+            </span>
+    
+            <!-- Right: Quick Links -->
+            <div class="mt-2 sm:mt-0 flex space-x-4 text-xs sm:text-sm">
+                <a href="about.html" class="hover:text-yellow-400 transition">About Us</a>
+                <a href="market.html" class="hover:text-yellow-400 transition">Market Analysis</a>
+                <a href="contact.html" class="hover:text-yellow-400 transition">Contact</a>
+            </div>
+        </div>
+    
+        <!-- Features Row -->
+        <div class="bg-gray-800 border-t border-gray-700">
+            <div
+                class="max-w-7xl mx-auto px-4 py-2 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs sm:text-sm text-gray-300 text-center">
+                <div class="hover:text-yellow-400 transition">✔️ Capital Protection</div>
+                <div class="hover:text-yellow-400 transition">📊 Advanced Market Analysis</div>
+                <div class="hover:text-yellow-400 transition">🔒 Risk Management First</div>
+                <div class="hover:text-yellow-400 transition">🌍 Global Investor Network</div>
+            </div>
+        </div>
     </div>
-
     <!-- Mobile Hamburger -->
     <button id="hamburger"
         class="fixed top-4 left-4 z-50 flex h-11 w-11 items-center justify-center rounded-xl bg-black/50 text-white backdrop-blur ring-1 ring-white/20 md:top-5 md:left-5"
@@ -98,51 +121,60 @@
         </section>
 
         <!-- Forex Learning Section -->
-        <section id="learn" class="py-16 px-6 bg-white">
-            <h2 class="text-3xl font-bold text-center text-[#0a1a3f] mb-12">Trading with Precision. Investing with Trust.</h2>
-            <div class="relative max-w-4xl mx-auto mt-6">
-                <!-- Opening Quote -->
-                <span class="absolute -left-6 -top-2 text-6xl text-blue-500 font-serif">“</span>
-            
-                <!-- Quoted Text -->
-                <p class="text-sm md:text-3xl text-gray-800 italic leading-relaxed">
-                    At SPT Capital, we apply proven trading strategies to manage and grow your investments with transparency and
-                    care.
-                </p>
-            
-                <!-- Closing Quote -->
-                <span class="absolute -right-6 -bottom-2 text-6xl text-blue-500 font-serif">”</span>
-            </div>
+<!-- Forex Learning Section -->
+<section id="learn" class="py-16 px-6 bg-white">
+    <h2 class="text-3xl font-bold text-center text-[#0a1a3f] mb-12">
+        Trading with Precision. Investing with Trust.
+    </h2>
 
-            <br>
+    <div class="relative max-w-4xl mx-auto mt-6">
+        <!-- Opening Quote -->
+        <span class="absolute -left-6 -top-2 text-6xl text-blue-500 font-serif">“</span>
+
+        <!-- Quoted Text -->
+        <p class="text-sm md:text-3xl text-gray-800 italic leading-relaxed">
+            At SPT Capital, we apply proven trading strategies to manage and grow your investments with transparency and
+            care.
+        </p>
+
+        <!-- Closing Quote -->
+        <span class="absolute -right-6 -bottom-2 text-6xl text-blue-500 font-serif">”</span>
+    </div>
+
+    <br>
+
+    <!-- Column Layout -->
+    <div class="flex flex-col gap-6 max-w-2xl mx-auto">
         <a href="market.html">
             <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
                 <img src="https://img.icons8.com/ios-filled/100/0a1a3f/combo-chart.png" alt="Market Analysis"
                     class="w-16 mx-auto mb-4">
                 <h3 class="text-xl font-semibold text-center mb-2">Market Analysis</h3>
-                <p class="text-center text-gray-600">
-                    Master chart reading, spot trends, and analyze markets effectively.
+                <p class="text-center text-gray-600">Master chart reading, spot trends, and analyze markets effectively.
                 </p>
             </div>
         </a>
+
         <a href="scalping.html">
             <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
                 <img src="https://img.icons8.com/ios-filled/100/0a1a3f/lightning-bolt.png" alt="Scalping"
                     class="w-16 mx-auto mb-4">
                 <h3 class="text-xl font-semibold text-center mb-2">Scalping Strategies</h3>
-                <p class="text-center text-gray-600">Quick in-and-out strategies for maximizing small price moves, Remember the power of Compounding.
+                <p class="text-center text-gray-600">
+                    Quick in-and-out strategies for maximizing small price moves. Remember the power of compounding.
                 </p>
             </div>
         </a>
+
         <a href="risk.html">
             <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
                 <img src="https://img.icons8.com/ios-filled/100/0a1a3f/lock--v1.png" alt="Risk Management"
                     class="w-16 mx-auto mb-4">
                 <h3 class="text-xl font-semibold text-center mb-2">Risk Management</h3>
-                <p class="text-center text-gray-600">Protect your capital with proven risk management principles.
-                </p>
+                <p class="text-center text-gray-600">Protect your capital with proven risk management principles.</p>
             </div>
         </a>
+
         <a href="psychology.html">
             <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
                 <img src="https://img.icons8.com/ios-filled/100/0a1a3f/brain.png" alt="Trading Psychology"
@@ -150,9 +182,10 @@
                 <h3 class="text-xl font-semibold text-center mb-2">Trading Psychology</h3>
                 <p class="text-center text-gray-600">Learn discipline and emotional control to stay consistent.</p>
             </div>
-            </div>
         </a>
-        </section>
+    </div>
+</section>
+
 
         <!-- Footer / Contact -->
         <!-- Footer -->
