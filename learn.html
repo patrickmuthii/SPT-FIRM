@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ open: null }">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPT Capital Firm— Learn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 to-black text-white">
+    <!-- Navbar -->
+    <nav class="bg-black/40 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+            <a href="index.html" class="font-bold text-xl text-yellow-400">SPT Capital Learn Lab</a>
+            <div class="space-x-6 text-sm">
+                <a href="index.html" class="hover:text-yellow-400">Home</a>
+                <a href="learn.html" class="text-yellow-400 font-semibold">Learn</a>
+                <a href="about.html" class="hover:text-yellow-400">About</a>
+                <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="px-6 pt-12 pb-16 text-center">
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight">Learn Trading the Right Way</h1>
+        <p class="mt-4 text-gray-300 max-w-3xl mx-auto">
+            Clear, beginner-friendly lessons on <span class="text-yellow-300">Scalping</span>,
+            <span class="text-yellow-300">Day Trading</span>,
+            <span class="text-yellow-300">Risk Management</span>, and the
+            <span class="text-yellow-300">why</span> behind EMAs & Stochastic.
+        </p>
+    </header>
+
+    <!-- Cards -->
+    <main class="max-w-6xl mx-auto px-6 pb-24">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card: Trading Styles -->
+            <button @click="open='styles'"
+                class="group p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition text-left shadow">
+                <h3 class="text-xl font-bold">Types of Traders</h3>
+                <p class="mt-2 text-gray-300">Scalper, Day Trader, Swing Trader, Investor — where do you fit?</p>
+                <div class="mt-4 text-yellow-400 group-hover:translate-x-1 transition">Open lesson →</div>
+            </button>
+
+            <!-- Card: Core Indicators -->
+            <button @click="open='indicators'"
+                class="group p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition text-left shadow">
+                <h3 class="text-xl font-bold">9 & 21 EMA + Stochastic</h3>
+                <p class="mt-2 text-gray-300">What they are, how they work, and why they matter.</p>
+                <div class="mt-4 text-yellow-400 group-hover:translate-x-1 transition">Open lesson →</div>
+            </button>
+
+            <!-- Card: Scalping -->
+            <button @click="open='scalping'"
+                class="group p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition text-left shadow">
+                <h3 class="text-xl font-bold">Scalping 101</h3>
+                <p class="mt-2 text-gray-300">A fast, rules-based approach using EMA + Stochastic.</p>
+                <div class="mt-4 text-yellow-400 group-hover:translate-x-1 transition">Open lesson →</div>
+            </button>
+
+            <!-- Card: Day Trading -->
+            <button @click="open='daytrading'"
+                class="group p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition text-left shadow">
+                <h3 class="text-xl font-bold">Day Trading 101</h3>
+                <p class="mt-2 text-gray-300">Structured intraday trades with patience and timing.</p>
+                <div class="mt-4 text-yellow-400 group-hover:translate-x-1 transition">Open lesson →</div>
+            </button>
+
+            <!-- Card: Risk -->
+            <button @click="open='risk'"
+                class="group p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition text-left shadow">
+                <h3 class="text-xl font-bold">Risk Management</h3>
+                <p class="mt-2 text-gray-300">The 1–2% rule, stop-loss logic, and trade sizing.</p>
+                <div class="mt-4 text-yellow-400 group-hover:translate-x-1 transition">Open lesson →</div>
+            </button>
+
+            <!-- Card: Playbook + FAQ -->
+            <button @click="open='playbook'"
+                class="group p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition text-left shadow">
+                <h3 class="text-xl font-bold">Example Playbook + FAQ</h3>
+                <p class="mt-2 text-gray-300">A full step-by-step trade + beginner questions answered.</p>
+                <div class="mt-4 text-yellow-400 group-hover:translate-x-1 transition">Open lesson →</div>
+            </button>
+        </div>
+    </main>
+
+    <!-- MODALS -->
+    <template x-if="open">
+        <div class="fixed inset-0 z-50 flex items-center justify-center">
+            <!-- Backdrop -->
+            <div class="absolute inset-0 bg-black/70" @click="open=null"></div>
+            <!-- Card -->
+            <div
+                class="relative max-w-3xl w-[92%] bg-gray-900 rounded-2xl shadow-2xl p-6 md:p-8 overflow-y-auto max-h-[88vh]">
+                <button class="absolute top-3 right-3 text-gray-400 hover:text-yellow-400" @click="open=null">✖</button>
+
+                <!-- LESSON: Trading Styles -->
+                <section x-show="open==='styles'" x-transition>
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Types of Traders</h2>
+                    <div class="space-y-6 text-gray-200 leading-relaxed">
+                        <div>
+                            <h3 class="font-bold text-yellow-300">Scalper</h3>
+                            <p>Holds trades for seconds to minutes on 1–5m charts. Targets tiny moves with strict rules.
+                                High focus, many trades/day.</p>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li><b>Pros:</b> Many opportunities, quick feedback.</li>
+                                <li><b>Cons:</b> Requires discipline, spreads/slippage matter.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-yellow-300">Day Trader</h3>
+                            <p>Opens and closes within the same day (5–60m charts). Avoids overnight risk, aims for
+                                clean intraday moves.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-yellow-300">Swing Trader</h3>
+                            <p>Holds for days/weeks (4H–D1). Fewer trades, larger targets, less screen time.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-yellow-300">Investor / Position Trader</h3>
+                            <p>Holds for months/years based on fundamentals and macro trends. Tolerates bigger
+                                short-term swings.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white/5">
+                            <p class="font-semibold">How to choose?</p>
+                            <p class="text-gray-300 mt-1">Ask yourself: How much time can I trade daily? Do I prefer
+                                fast or patient decisions? What drawdown can I handle emotionally?</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LESSON: Indicators -->
+                <section x-show="open==='indicators'" x-transition>
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-4">EMAs & Stochastic — The Why & How</h2>
+                    <div class="space-y-6 text-gray-200 leading-relaxed">
+                        <div>
+                            <h3 class="font-bold text-yellow-300">9 & 21 EMA — Why they matter</h3>
+                            <p><b>EMA</b> (Exponential Moving Average) weights recent price more. The <b>9 EMA</b>
+                                reacts faster; the <b>21 EMA</b> is slower. Their relationship shows short-term trend
+                                momentum.</p>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li><b>9 above 21:</b> Bullish momentum (look for buys on dips).</li>
+                                <li><b>9 below 21:</b> Bearish momentum (look for sells on pops).</li>
+                                <li><b>Crossovers:</b> A shift in short-term control (buyers ↔ sellers).</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-yellow-300">Stochastic Oscillator — What “overbought/oversold”
+                                really means</h3>
+                            <p>
+                                Stochastic compares the current price to its recent range (usually 14 periods).
+                                <b>Overbought (&gt;80)</b> doesn’t mean price must fall — it means price moved up
+                                quickly and many buyers are already in, so new buyers may slow down.
+                                <b>Oversold (&lt;20)</b> means strong recent selling; sellers may be exhausted.
+                            </p>
+                            <div class="mt-3 p-4 rounded-xl bg-white/5">
+                                <p class="font-semibold">Analogy:</p>
+                                <p class="text-gray-300">A bus can be “full” (overbought). It might keep going, but
+                                    fewer new passengers can get in — momentum often slows, sometimes reverses.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-yellow-300">How to combine them (edge stacking)</h3>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Trade <b>with</b> the EMA trend.</li>
+                                <li>Use Stochastic for precise timing (oversold in an uptrend; overbought in a
+                                    downtrend).</li>
+                                <li>Enter on pullbacks toward the 9/21 EMA zone; exit at nearby levels.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LESSON: Scalping -->
+                <section x-show="open==='scalping'" x-transition>
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Scalping 101 — Fast, Focused, Rules-Based</h2>
+                    <div class="space-y-6 text-gray-200 leading-relaxed">
+                        <div class="p-4 rounded-xl bg-white/5">
+                            <p class="font-semibold">Goal:</p>
+                            <p class="text-gray-300">Capture small, high-probability moves on 1–5 minute charts. Many
+                                small wins & strict losses.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-yellow-300">Chart Setup</h3>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Timeframe: 1m or 5m (optionally 15m for bias).</li>
+                                <li>Indicators: 9 EMA, 21 EMA, Stochastic (14,3,3 typical).</li>
+                                <li>Key levels: nearest support/resistance.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-yellow-300">Entry Logic (trend-following)</h3>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>If <b>9 EMA &gt; 21 EMA</b> → bullish bias. Wait for price to pull back near EMAs.
+                                </li>
+                                <li>Stochastic dips &lt;20 and curls up → consider a buy.</li>
+                                <li>Reverse for shorts when 9 &lt; 21 and Stochastic &gt;80.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-yellow-300">Exits & Risk</h3>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Take Profit quickly (example: 5–15 pips FX, or $2–$5 on gold).</li>
+                                <li>Stop loss: beyond recent swing (tight but realistic).</li>
+                                <li>Risk per trade: <b>1% max</b>. Avoid overtrading.</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white/5">
+                            <p class="font-semibold">Why it works:</p>
+                            <p class="text-gray-300">You follow momentum (EMAs) but enter on temporary exhaustion
+                                (Stochastic extremes), aiming for a quick snap back toward the dominant direction.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LESSON: Day Trading -->
+                <section x-show="open==='daytrading'" x-transition>
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Day Trading 101 — Structure, Timing, Patience
+                    </h2>
+                    <div class="space-y-6 text-gray-200 leading-relaxed">
+                        <div>
+                            <h3 class="font-bold text-yellow-300">Timeframes & Sessions</h3>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Plan on 1H/30m; execute on 15m/5m.</li>
+                                <li>Watch session opens (e.g., London, New York overlap) for volatility.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-yellow-300">Framework</h3>
+                            <ol class="list-decimal list-inside text-gray-300 mt-2 space-y-1">
+                                <li>Define bias with 9/21 EMA on 30m–1H.</li>
+                                <li>Mark key levels (prior day high/low, session high/low, clean S/R).</li>
+                                <li>Wait for price to approach a level with Stochastic confirming.</li>
+                                <li>Enter with tight invalidation; let winners run to next level.</li>
+                            </ol>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white/5">
+                            <p class="font-semibold">Mindset:</p>
+                            <p class="text-gray-300">Fewer, higher-quality trades. Patience beats constant clicking.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LESSON: Risk Management -->
+                <section x-show="open==='risk'" x-transition>
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Risk Management — Protect Capital First</h2>
+                    <div class="space-y-6 text-gray-200 leading-relaxed">
+                        <div>
+                            <h3 class="font-bold text-yellow-300">The 1–2% Rule (Why)</h3>
+                            <p>Large risk per trade compounds losses. At 10% risk/trade, 10 losses can wipe you out. At
+                                1% risk, you can survive unlucky streaks and recover.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-yellow-300">Position Sizing (Simple)</h3>
+                            <p class="text-gray-300">Position size = (Account × Risk%) ÷ Stop size.</p>
+                            <p class="text-gray-400 text-sm mt-1">Example: $500 account, 1% risk ($5), 50-pip stop →
+                                size = $5 / 50 = $0.10 per pip.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-yellow-300">Rules to Stay Alive</h3>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Hard stop on every trade.</li>
+                                <li>No revenge trades after a loss.</li>
+                                <li>Daily loss limit (e.g., 3 losses or −3%). Stop for the day.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LESSON: Playbook + FAQ -->
+                <section x-show="open==='playbook'" x-transition>
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Example Playbook + Beginner FAQ</h2>
+                    <div class="space-y-8 text-gray-200 leading-relaxed">
+                        <div>
+                            <h3 class="font-bold text-yellow-300">Example Trade — Gold (XAUUSD) Scalping</h3>
+                            <ol class="list-decimal list-inside text-gray-300 mt-2 space-y-1">
+                                <li><b>Bias:</b> On 5m, 9 EMA above 21 EMA → uptrend.</li>
+                                <li><b>Wait:</b> Price pulls back toward EMAs; Stochastic drops &lt;20.</li>
+                                <li><b>Entry:</b> Buy when Stochastic curls up + candle confirms (small bullish close).
+                                </li>
+                                <li><b>Stop:</b> Below recent swing low.</li>
+                                <li><b>TP:</b> $2–$5 move or next intraday resistance.</li>
+                                <li><b>Risk:</b> 1% of account max. No adding to losers.</li>
+                            </ol>
+                            <p class="mt-3 text-gray-400 text-sm">Why it works: you’re joining the dominant push (EMAs)
+                                at a moment of short-term exhaustion (Stochastic), aiming for a quick continuation.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-yellow-300">Beginner FAQ</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="font-semibold">Q: Why does “overbought” happen?</p>
+                                    <p>A: Price moved up quickly; many buyers are already in. Momentum often slows
+                                        because fewer new buyers are left. It can keep rising, but probability of a
+                                        pause/pullback increases.</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Q: Do EMAs predict the future?</p>
+                                    <p>A: No — they summarize recent behavior. We use them to align with the current
+                                        push rather than fight it.</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Q: Why not trade every signal?</p>
+                                    <p>A: Quality over quantity. Filter by trend, level, and session — fewer, cleaner
+                                        trades improve outcomes.</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Q: How do I know when to stop for the day?</p>
+                                    <p>A: Use a daily loss cap (e.g., −2% or 3 losing trades). Protect mental capital.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-white/5">
+                            <h4 class="font-semibold">Practice Checklist</h4>
+                            <ul class="list-disc list-inside text-gray-300 mt-2">
+                                <li>Mark trend with 9/21 EMA on your chart.</li>
+                                <li>Identify 2–3 clean support/resistance levels.</li>
+                                <li>Wait for Stochastic alignment with the trend (oversold in uptrend / overbought in
+                                    downtrend).</li>
+                                <li>Define stop before entry; size the position to 1% risk.</li>
+                                <li>Journal: screenshot setup → entry → exit → notes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </template>
+
+    <!-- Footer -->
+    <footer class="bg-black/40 backdrop-blur-sm py-8 text-center text-gray-400">
+        © 2025 SPT Capital Firm — Learn. All rights reserved.
+    </footer>
+</body>
+
+</html>

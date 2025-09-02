@@ -15,10 +15,10 @@
     <!-- Top Banner -->
     <!-- Professional Top Banner with Features -->
     <div class="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white shadow">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between ">
             <!-- Left: Brand/Tagline -->
-            <span class="text-sm sm:text-base font-medium tracking-wide">
-                SPT Capital — Professional Market Insights & Investment Strategies
+            <span class="text-sm sm:text-base font-medium tracking-wide text-blue-500 ">
+                SPT CAPITAL FIRM — Navigating Markets with Confidence
             </span>
     
             <!-- Right: Quick Links -->
@@ -31,13 +31,95 @@
     
         <!-- Features Row -->
         <div class="bg-gray-800 border-t border-gray-700">
-            <div
+            <div x-data="{ openModal: null }"
                 class="max-w-7xl mx-auto px-4 py-2 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs sm:text-sm text-gray-300 text-center">
-                <div class="hover:text-yellow-400 transition">✔️ Capital Protection</div>
-                <div class="hover:text-yellow-400 transition">📊 Advanced Market Analysis</div>
-                <div class="hover:text-yellow-400 transition">🔒 Risk Management First</div>
-                <div class="hover:text-yellow-400 transition">🌍 Global Investor Network</div>
+                <!-- Capital Protection -->
+                <div @click="openModal = 'capital'" class="cursor-pointer hover:text-yellow-400 transition">
+                    ✔️ Capital Protection
+                </div>
+            
+                <!-- Market Analysis -->
+                <div @click="openModal = 'analysis'" class="cursor-pointer hover:text-yellow-400 transition">
+                    📊 Advanced Market Analysis
+                </div>
+            
+                <!-- Risk Management -->
+                <div @click="openModal = 'risk'" class="cursor-pointer hover:text-yellow-400 transition">
+                    🔒 Risk Management First
+                </div>
+            
+                <!-- Global Network -->
+                <div @click="openModal = 'network'" class="cursor-pointer hover:text-yellow-400 transition">
+                    🌍 Global Investor Network
+                </div>
+            
+                <!-- Popup Modal -->
+                <template x-if="openModal">
+                    <div class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+                        @click.self="openModal = null">
+                        <div class="bg-gray-900 text-gray-200 rounded-2xl p-6 max-w-md w-full shadow-xl relative">
+                            <button @click="openModal = null" class="absolute top-2 right-2 text-gray-400 hover:text-yellow-400">
+                                ✖
+                            </button>
+            
+                            <!-- Capital Protection -->
+                            <div x-show="openModal === 'capital'">
+                                <h2 class="text-xl font-bold text-yellow-400 mb-2">✔️ Capital Protection</h2>
+                                <p>
+                                    We prioritize the safety of your investment. Every strategy is designed to preserve
+                                    your capital before seeking profits, ensuring sustainable growth without unnecessary risk.
+                                </p>
+                            </div>
+            
+                            <!-- Market Analysis -->
+                            <div x-show="openModal === 'analysis'">
+                                <h2 class="text-xl font-bold text-yellow-400 mb-2">📊 Advanced Market Analysis</h2>
+                                <p>
+                                    Our team leverages data-driven insights, institutional strategies, and cutting-edge
+                                    tools to identify high-probability market opportunities—giving you the edge in trading
+                                    decisions.
+                                </p>
+                            </div>
+            
+                            <!-- Risk Management -->
+                            <div x-show="openModal === 'risk'">
+                                <h2 class="text-xl font-bold text-yellow-400 mb-2">🔒 Risk Management First</h2>
+                                <p>
+                                    Success is not about how much you make, but how much you keep. We apply strict risk
+                                    controls, including stop-loss systems and position sizing, to safeguard every trade.
+                                </p>
+                            </div>
+            
+                            <!-- Global Network -->
+                            <div x-show="openModal === 'network'">
+                                <h2 class="text-xl font-bold text-yellow-400 mb-2">🌍 Global Investor Network</h2>
+                                <p>
+                                    Join a community of traders and investors worldwide. Gain access to shared knowledge,
+                                    mentorship, and global opportunities that expand beyond borders.
+                                </p>
+                                <!-- Social Links -->
+                                <div class="flex justify-center gap-4 mt-4">
+                                    <a href="https://t.me/+TYCwDDLFcnRjNzg0" target="_blank"
+                                        class="px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow transition">
+                                        Telegram
+                                    </a>
+                                    <a href="https://www.facebook.com/profile.php?id=61578356715393" target="_blank"
+                                        class="px-3 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded-lg shadow transition">
+                                        Facebook
+                                    </a>
+                                    <a href="https://www.instagram.com/spt_capital_firm?igsh=MTgxaXV3aGxkbHUyOQ==" target="_blank"
+                                        class="px-3 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-lg shadow transition">
+                                        Instagram
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
             </div>
+            
+            <!-- Alpine.js (small & CDN based) -->
+            <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
         </div>
     </div>
     <!-- Mobile Hamburger -->
@@ -64,9 +146,9 @@
             <!-- Nav links -->
             <nav class="flex-1 p-4 sm:p-6 space-y-1 text-sm">
                 <a href="#hero" class="block rounded-lg px-4 py-3 hover:bg-white/10">Home</a>
-                <a href="#learn" class="block rounded-lg px-4 py-3 hover:bg-white/10">Learn</a>
-                <a href="#about" class="block rounded-lg px-4 py-3 hover:bg-white/10">About</a>
-                <a href="#contact" class="block rounded-lg px-4 py-3 hover:bg-white/10">Contact Us</a>
+                <a href="learn.html" class="block rounded-lg px-4 py-3 hover:bg-white/10">Learn</a>
+                <a href="about.html" class="block rounded-lg px-4 py-3 hover:bg-white/10">About</a>
+                <a href="contact.html" class="block rounded-lg px-4 py-3 hover:bg-white/10">Contact Us</a>
 
                 <!-- IG Link with logo -->
                 <a href="https://instagram.com/SPT_Capital_Firm" target="_blank" rel="noopener"
@@ -76,7 +158,7 @@
                         <path
                             d="M224 202.66A53.34 53.34 0 1 0 277.34 256 53.38 53.38 0 0 0 224 202.66Zm124.71-41a54.77 54.77 0 0 0-31.11-31.08C298.86 120 224 120 224 120s-74.86 0-93.6 10.58a54.77 54.77 0 0 0-31.11 31.08C88.66 221.4 88.66 256 88.66 256s0 34.6 10.63 94.33a54.77 54.77 0 0 0 31.11 31.08C149.14 392 224 392 224 392s74.86 0 93.6-10.58a54.77 54.77 0 0 0 31.11-31.08C359.34 290.6 359.34 256 359.34 256s0-34.6-10.63-94.33ZM224 338a82 82 0 1 1 82-82 82.09 82.09 0 0 1-82 82Zm85.33-148.67a19.2 19.2 0 1 1 19.2-19.2 19.2 19.2 0 0 1-19.2 19.2Z" />
                     </svg>
-                    <span>Reach me via IG</span>
+                    <span>Reach us via Instagram</span>
                 </a>
             </nav>
 
@@ -93,8 +175,14 @@
     <main class="relative">
 
         <!-- Hero Section (kept BLACK) -->
-        <section id="hero" class="bg-black h-[60vh] flex flex-col items-center justify-center text-center relative">
-            <img src="Spt.jpg" alt="SPT Capital Firm Logo" class="max-h-[40vh] mx-auto">
+        <section id="hero" class="bg-[#0a0e1a] h-[80vh] flex flex-col items-center justify-center text-center relative">
+            <div class="px-6 py-5 flex items-center gap-3 border-b border-white/10">
+                <video autoplay muted loop playsinline class="h-[50vh] mx-auto w-auto rounded-sm">
+                    <source src="Spt-anm-1.mp4" type="video/mp4" download="false" >
+                    Your browser does not support the video tag.
+                </video>
+                <span class="font-semibold tracking-wide">SPT Capital Firm</span>
+            </div>
             <h1 class="text-white text-xl md:text-2xl font-semibold mt-4">
                 Smart Profit Technologies — Trade with Precision
             </h1>
