@@ -8,38 +8,106 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gradient-to-br from-gray-900 to-black text-white">
+<body class="bg-gradient-to-br from-gray-900 to-black text-white font-sans">
+
     <!-- Navbar -->
     <nav class="bg-black/40 backdrop-blur-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
             <h1 class="font-bold text-xl text-yellow-400">SPT Capital Firm</h1>
             <div class="space-x-6 text-sm">
                 <a href="index.html" class="hover:text-yellow-400">Home</a>
-                <a href="learn.html" class="hover:text-yellow-400">Learn</a>
-                <a href="about.html" class="hover:text-yellow-400">About</a>
-                <a href="contact.html" class="text-yellow-400 font-semibold">Contact</a>
+                <a href="about.html" class="hover:text-yellow-400 transition">About Us</a>
+                <a href="market.html" class="hover:text-yellow-400 transition">Market Analysis</a>
+                <a href="contact.html" class="hover:text-yellow-400 transition">Contact</a>
+                <a href="learn.html" class="hover:text-yellow-400 transition">Learn</a>
+                <a href="psychology.html" class="hover:text-yellow-400 transition">Psychology</a>
+                <a href="risk.html" class="hover:text-yellow-400 transition">Risk Management</a>
+                <a href="scalping.html" class="hover:text-yellow-400 transition">Scalping</a>
             </div>
         </div>
     </nav>
 
-    <!-- Contact -->
-    <section class="max-w-3xl mx-auto px-6 py-16 text-center">
-        <h2 class="text-4xl font-extrabold">Get in Touch</h2>
-        <p class="mt-4 text-gray-300">We’d love to connect with you! Reach us through social media or email.</p>
+    <!-- Hero Section -->
+<section
+    class="relative bg-gradient-to-r from-gray-800 via-gray-900 to-black flex items-center justify-center h-[400px] overflow-hidden">
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <source src="Spt-anm-1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-        <div class="mt-8 flex justify-center gap-6 text-lg">
-            <a href="https://t.me/+TYCwDDLFcnRjNzg0" target="_blank" class="hover:text-yellow-400">Telegram</a>
-            <a href="https://www.facebook.com/profile.php?id=61578356715393" target="_blank"
-                class="hover:text-yellow-400">Facebook</a>
-            <a href="https://www.instagram.com/spt_capital_firm" target="_blank"
-                class="hover:text-yellow-400">Instagram</a>
+    <!-- Overlay Content -->
+    <div class="relative z-10 text-center px-6">
+        <h2 class="text-4xl md:text-5xl font-bold text-yellow-400">Connect with SPT Capital</h2>
+        <p class="mt-4 text-gray-200 text-lg md:text-xl">Have questions or need assistance? Reach out to us anytime.</p>
+    </div>
+</section>
+
+    <!-- Contact Info & Form -->
+    <section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12">
+        <!-- Contact Cards -->
+        <div class="space-y-8">
+            <div class="bg-gray-800/50 p-6 rounded-2xl shadow-lg flex items-start gap-4">
+                <div class="text-yellow-400 text-2xl">📞</div>
+                <div>
+                    <h3 class="text-xl font-semibold text-yellow-400">Call Us</h3>
+                    <p class="text-gray-300 mt-1">+254 712 345 678</p>
+                </div>
+            </div>
+            <div class="bg-gray-800/50 p-6 rounded-2xl shadow-lg flex items-start gap-4">
+                <div class="text-yellow-400 text-2xl">📧</div>
+                <div>
+                    <h3 class="text-xl font-semibold text-yellow-400">Email</h3>
+                    <p class="text-gray-300 mt-1">info.sptcapital@gmail.com</p>
+                </div>
+            </div>
+            <div class="bg-gray-800/50 p-6 rounded-2xl shadow-lg flex items-start gap-4">
+                <div class="text-yellow-400 text-2xl">🏢</div>
+                <div>
+                    <h3 class="text-xl font-semibold text-yellow-400">Visit Us</h3>
+                    <p class="text-gray-300 mt-1">Nairobi, Kenya</p>
+                </div>
+            </div>
         </div>
 
-        <div class="mt-8">
-            <p class="text-gray-400">Prefer email?</p>
-            <a href="mailto:info.sptcapital@gmail.com" class="text-yellow-400 hover:underline">info.sptcapital@gmail.com</a>
-        </div>
+        <!-- Contact Form -->
+        <form class="bg-gray-800/50 p-8 rounded-2xl shadow-lg space-y-6">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">Send Us a Message</h3>
+            <div class="flex flex-col">
+                <label class="mb-1 text-gray-300" for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Your Name"
+                    class="p-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:border-yellow-400 outline-none">
+            </div>
+            <div class="flex flex-col">
+                <label class="mb-1 text-gray-300" for="email">Email</label>
+                <input type="email" id="email" placeholder="you@example.com"
+                    class="p-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:border-yellow-400 outline-none">
+            </div>
+            <div class="flex flex-col">
+                <label class="mb-1 text-gray-300" for="message">Message</label>
+                <textarea id="message" rows="5" placeholder="Write your message..."
+                    class="p-3 rounded-lg bg-gray-900 text-white border border-gray-700 focus:border-yellow-400 outline-none"></textarea>
+            </div>
+            <button type="submit"
+                class="w-full bg-yellow-400 text-gray-900 font-bold py-3 rounded-lg hover:bg-yellow-500 transition">Send
+                Message</button>
+        </form>
     </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/254712345678" target="_blank"
+        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.47 3.41 1.28 4.83L2 22l5.42-1.34c1.37.74 2.95 1.15 4.62 1.15 5.52 0 10-4.48 10-10s-4.48-10-10-10zm0 18c-1.52 0-2.94-.45-4.13-1.22l-.29-.21-3.22.79.83-3.08-.2-.32C4.46 14.77 4 13.42 4 12.04 4 7.58 7.57 4 12.04 4s8.04 3.58 8.04 8.04-3.58 8.04-8.04 8.04zm4.77-10.53l-1.25 5.1c-.1.39-.55.6-.91.41l-2.27-1.13-1.09 1.04c-.19.19-.49.25-.74.15l-.66-.26c-.25-.1-.41-.35-.39-.61l.06-.68c.02-.26.11-.51.27-.7l1.09-1.26c.18-.21.17-.52-.03-.71l-1.54-1.52c-.19-.19-.2-.5-.02-.7l.66-.77c.18-.21.48-.27.71-.12l1.76 1.1 2.34-1.19c.37-.19.79.03.89.43l.91 3.16c.11.38-.12.78-.49.89z" />
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-black/50 text-gray-400 text-center py-6 mt-12">
+        <p>© 2025 SPT Capital. All rights reserved.</p>
+    </footer>
+
 </body>
 
 </html>

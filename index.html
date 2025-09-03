@@ -3,354 +3,226 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SPT Capital Firm</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-white text-gray-900">
+<body class="bg-white text-gray-900 font-sans">
 
-    <!-- Top Banner -->
-    <!-- Professional Top Banner with Features -->
+    <!-- ✅ TOP BANNER with LOGO + HAMBURGER -->
     <div class="w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white shadow">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between ">
-            <!-- Left: Brand/Tagline -->
-            <span class="text-sm sm:text-base font-medium tracking-wide text-blue-500 ">
-                SPT CAPITAL FIRM — Navigating Markets with Confidence
-            </span>
-    
-            <!-- Right: Quick Links -->
-            <div class="mt-2 sm:mt-0 flex space-x-4 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <img src="Spt.jpg" alt="SPT Logo" class="h-10 w-auto" />
+                <span class="text-sm sm:text-base font-medium tracking-wide text-yellow-400">
+                    SPT CAPITAL FIRM — Navigating Markets with Confidence
+                </span>
+            </div>
+            <!-- Nav Links (Desktop) -->
+            <div class="hidden md:flex space-x-6 text-sm">
                 <a href="about.html" class="hover:text-yellow-400 transition">About Us</a>
                 <a href="market.html" class="hover:text-yellow-400 transition">Market Analysis</a>
                 <a href="contact.html" class="hover:text-yellow-400 transition">Contact</a>
+                <a href="learn.html" class="hover:text-yellow-400 transition">Learn</a>
+                <a href="psychology.html" class="hover:text-yellow-400 transition">Psychology</a>
+                <a href="risk.html" class="hover:text-yellow-400 transition">Risk Management</a>
+                <a href="scalping.html" class="hover:text-yellow-400 transition">Scalping</a>
             </div>
-        </div>
-    
-        <!-- Features Row -->
-        <div class="bg-gray-800 border-t border-gray-700">
-            <div x-data="{ openModal: null }"
-                class="max-w-7xl mx-auto px-4 py-2 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs sm:text-sm text-gray-300 text-center">
-                <!-- Capital Protection -->
-                <div @click="openModal = 'capital'" class="cursor-pointer hover:text-yellow-400 transition">
-                    ✔️ Capital Protection
-                </div>
-            
-                <!-- Market Analysis -->
-                <div @click="openModal = 'analysis'" class="cursor-pointer hover:text-yellow-400 transition">
-                    📊 Advanced Market Analysis
-                </div>
-            
-                <!-- Risk Management -->
-                <div @click="openModal = 'risk'" class="cursor-pointer hover:text-yellow-400 transition">
-                    🔒 Risk Management First
-                </div>
-            
-                <!-- Global Network -->
-                <div @click="openModal = 'network'" class="cursor-pointer hover:text-yellow-400 transition">
-                    🌍 Global Investor Network
-                </div>
-            
-                <!-- Popup Modal -->
-                <template x-if="openModal">
-                    <div class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
-                        @click.self="openModal = null">
-                        <div class="bg-gray-900 text-gray-200 rounded-2xl p-6 max-w-md w-full shadow-xl relative">
-                            <button @click="openModal = null" class="absolute top-2 right-2 text-gray-400 hover:text-yellow-400">
-                                ✖
-                            </button>
-            
-                            <!-- Capital Protection -->
-                            <div x-show="openModal === 'capital'">
-                                <h2 class="text-xl font-bold text-yellow-400 mb-2">✔️ Capital Protection</h2>
-                                <p>
-                                    We prioritize the safety of your investment. Every strategy is designed to preserve
-                                    your capital before seeking profits, ensuring sustainable growth without unnecessary risk.
-                                </p>
-                            </div>
-            
-                            <!-- Market Analysis -->
-                            <div x-show="openModal === 'analysis'">
-                                <h2 class="text-xl font-bold text-yellow-400 mb-2">📊 Advanced Market Analysis</h2>
-                                <p>
-                                    Our team leverages data-driven insights, institutional strategies, and cutting-edge
-                                    tools to identify high-probability market opportunities—giving you the edge in trading
-                                    decisions.
-                                </p>
-                            </div>
-            
-                            <!-- Risk Management -->
-                            <div x-show="openModal === 'risk'">
-                                <h2 class="text-xl font-bold text-yellow-400 mb-2">🔒 Risk Management First</h2>
-                                <p>
-                                    Success is not about how much you make, but how much you keep. We apply strict risk
-                                    controls, including stop-loss systems and position sizing, to safeguard every trade.
-                                </p>
-                            </div>
-            
-                            <!-- Global Network -->
-                            <div x-show="openModal === 'network'">
-                                <h2 class="text-xl font-bold text-yellow-400 mb-2">🌍 Global Investor Network</h2>
-                                <p>
-                                    Join a community of traders and investors worldwide. Gain access to shared knowledge,
-                                    mentorship, and global opportunities that expand beyond borders.
-                                </p>
-                                <!-- Social Links -->
-                                <div class="flex justify-center gap-4 mt-4">
-                                    <a href="https://t.me/+TYCwDDLFcnRjNzg0" target="_blank"
-                                        class="px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow transition">
-                                        Telegram
-                                    </a>
-                                    <a href="https://www.facebook.com/profile.php?id=61578356715393" target="_blank"
-                                        class="px-3 py-2 bg-blue-700 hover:bg-blue-800 text-white rounded-lg shadow transition">
-                                        Facebook
-                                    </a>
-                                    <a href="https://www.instagram.com/spt_capital_firm?igsh=MTgxaXV3aGxkbHUyOQ==" target="_blank"
-                                        class="px-3 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-lg shadow transition">
-                                        Instagram
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </template>
-            </div>
-            
-            <!-- Alpine.js (small & CDN based) -->
-            <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+            <!-- Hamburger (Mobile) -->
+            <button id="menuBtn" class=" md:hidden text-yellow-400 text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </div>
-    <!-- Mobile Hamburger -->
-    <button id="hamburger"
-        class="fixed top-4 left-4 z-50 flex h-11 w-11 items-center justify-center rounded-xl bg-black/50 text-white backdrop-blur ring-1 ring-white/20 md:top-5 md:left-5"
-        aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
-        <div class="space-y-1.5">
-            <span id="bar1" class="block h-0.5 w-6 bg-white origin-left transition-transform"></span>
-            <span id="bar2" class="block h-0.5 w-6 bg-white transition-opacity"></span>
-            <span id="bar3" class="block h-0.5 w-6 bg-white origin-left transition-transform"></span>
+
+    <!-- ✅ SIDEBAR (Animated) -->
+    <div id="sidebar"
+        class="fixed top-0 left-0 w-64 h-full bg-gray-900 text-white transform -translate-x-full transition-transform duration-500 ease-in-out z-50">
+        <div class="p-4 flex justify-between items-center border-b border-gray-700">
+            <h2 class="text-lg font-bold text-yellow-400">SPT Capital</h2>
+            <button id="closeBtn" class="text-gray-400 hover:text-yellow-400">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-    </button>
-
-    <!-- Slide-in Sidebar -->
-    <aside id="sidebar"
-        class="fixed inset-y-0 left-0 z-40 w-72 -translate-x-full transform bg-neutral-950 text-white ring-1 ring-white/10 transition-transform duration-300">
-        <div class="h-full flex flex-col">
-            <!-- Mini header -->
-            <div class="px-6 py-5 flex items-center gap-3 border-b border-white/10">
-                <img src="Spt.jpg" alt="SPT logo" class="h-8 w-auto rounded-sm">
-                <span class="font-semibold tracking-wide">SPT Capital Firm</span>
-            </div>
-
-            <!-- Nav links -->
-            <nav class="flex-1 p-4 sm:p-6 space-y-1 text-sm">
-                <a href="#hero" class="block rounded-lg px-4 py-3 hover:bg-white/10">Home</a>
-                <a href="learn.html" class="block rounded-lg px-4 py-3 hover:bg-white/10">Learn</a>
-                <a href="about.html" class="block rounded-lg px-4 py-3 hover:bg-white/10">About</a>
-                <a href="contact.html" class="block rounded-lg px-4 py-3 hover:bg-white/10">Contact Us</a>
-
-                <!-- IG Link with logo -->
-                <a href="https://instagram.com/SPT_Capital_Firm" target="_blank" rel="noopener"
-                    class="flex items-center gap-3 rounded-lg px-4 py-3 hover:bg-white/10">
-                    <!-- Instagram SVG -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-5 w-5 fill-white/90">
-                        <path
-                            d="M224 202.66A53.34 53.34 0 1 0 277.34 256 53.38 53.38 0 0 0 224 202.66Zm124.71-41a54.77 54.77 0 0 0-31.11-31.08C298.86 120 224 120 224 120s-74.86 0-93.6 10.58a54.77 54.77 0 0 0-31.11 31.08C88.66 221.4 88.66 256 88.66 256s0 34.6 10.63 94.33a54.77 54.77 0 0 0 31.11 31.08C149.14 392 224 392 224 392s74.86 0 93.6-10.58a54.77 54.77 0 0 0 31.11-31.08C359.34 290.6 359.34 256 359.34 256s0-34.6-10.63-94.33ZM224 338a82 82 0 1 1 82-82 82.09 82.09 0 0 1-82 82Zm85.33-148.67a19.2 19.2 0 1 1 19.2-19.2 19.2 19.2 0 0 1-19.2 19.2Z" />
-                    </svg>
-                    <span>Reach us via Instagram</span>
-                </a>
-            </nav>
-
-            <div class="p-6 border-t border-white/10 text-xs text-white/60">
-                © 2025 SPT Capital Firm
-            </div>
-        </div>
-    </aside>
-
-    <!-- Dark overlay when menu is open -->
-    <div id="overlay" class="fixed inset-0 z-30 hidden bg-black/50 backdrop-blur-sm"></div>
-
-    <!-- MAIN CONTENT -->
-    <main class="relative">
-
-        <!-- Hero Section (kept BLACK) -->
-        <section id="hero" class="bg-[#0a0e1a] h-[80vh] flex flex-col items-center justify-center text-center relative">
-            <div class="px-6 py-5 flex items-center gap-3 border-b border-white/10">
-                <video autoplay muted loop playsinline class="h-[50vh] mx-auto w-auto rounded-sm">
-                    <source src="Spt-anm-1.mp4" type="video/mp4" download="false" >
-                    Your browser does not support the video tag.
-                </video>
-                <span class="font-semibold tracking-wide">SPT Capital Firm</span>
-            </div>
-            <h1 class="text-white text-xl md:text-2xl font-semibold mt-4">
-                Smart Profit Technologies — Trade with Precision
-            </h1>
-            <div class="absolute bottom-4 animate-bounce text-white text-sm">↓ Scroll Down</div>
-        </section>
-
-        <!-- About (anchor target for sidebar) -->
-        <section id="about" class="py-10 px-6 bg-white">
-            <div class="max-w-5xl mx-auto text-center">
-                <h2 class="text-2xl font-bold text-[#0a1a3f] mb-4">About SPT Capital Firm</h2>
-                <p class="text-gray-600">
-                    SPT Capital Firm is an independent investment firm focused on trading in the global financial markets, with a primary
-                    emphasis on Forex and commodities such as gold (XAUUSD). Our goal is to deliver consistent growth by applying
-                    disciplined strategies, risk management, and cutting-edge technology.
-                    
-                    We provide investors with access to professional trading expertise, ensuring that every decision is driven by careful
-                    market analysis and transparency. At SPT Capital, we believe in building trust, creating opportunities, and empowering
-                    our partners to grow with us.
-                    
-                    Our Mission: To transform capital into sustainable wealth through smart trading and innovation.
-                    Our Vision: To become a trusted investment partner known for integrity, performance, and long-term value.
-                </p>
-            </div>
-        </section>
-
-        <!-- Forex Learning Section -->
-<!-- Forex Learning Section -->
-<section id="learn" class="py-16 px-6 bg-white">
-    <h2 class="text-3xl font-bold text-center text-[#0a1a3f] mb-12">
-        Trading with Precision. Investing with Trust.
-    </h2>
-
-    <div class="relative max-w-4xl mx-auto mt-6">
-        <!-- Opening Quote -->
-        <span class="absolute -left-6 -top-2 text-6xl text-blue-500 font-serif">“</span>
-
-        <!-- Quoted Text -->
-        <p class="text-sm md:text-3xl text-gray-800 italic leading-relaxed">
-            At SPT Capital, we apply proven trading strategies to manage and grow your investments with transparency and
-            care.
-        </p>
-
-        <!-- Closing Quote -->
-        <span class="absolute -right-6 -bottom-2 text-6xl text-blue-500 font-serif">”</span>
+        <nav class="p-6 space-y-4">
+                <a href="about.html" class="hover:text-yellow-400 transition">About Us</a>
+                <a href="market.html" class="hover:text-yellow-400 transition">Market Analysis</a>
+                <a href="contact.html" class="hover:text-yellow-400 transition">Contact</a>
+                <a href="learn.html" class="hover:text-yellow-400 transition">Learn</a>
+                <a href="psychology.html" class="hover:text-yellow-400 transition">Psychology</a>
+                <a href="risk.html" class="hover:text-yellow-400 transition">Risk Management</a>
+                <a href="scalping.html" class="hover:text-yellow-400 transition">Scalping</a>
+        </nav>
     </div>
 
-    <br>
+    <!-- Overlay with fade-in -->
+    <div id="overlay"
+        class="fixed inset-0 bg-black/50 hidden opacity-0 transition-opacity duration-500 ease-in-out z-40"></div>
 
-    <!-- Column Layout -->
-    <div class="flex flex-col gap-6 max-w-2xl mx-auto">
-        <a href="market.html">
-            <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
-                <img src="https://img.icons8.com/ios-filled/100/0a1a3f/combo-chart.png" alt="Market Analysis"
-                    class="w-16 mx-auto mb-4">
-                <h3 class="text-xl font-semibold text-center mb-2">Market Analysis</h3>
-                <p class="text-center text-gray-600">Master chart reading, spot trends, and analyze markets effectively.
-                </p>
-            </div>
-        </a>
-
-        <a href="scalping.html">
-            <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
-                <img src="https://img.icons8.com/ios-filled/100/0a1a3f/lightning-bolt.png" alt="Scalping"
-                    class="w-16 mx-auto mb-4">
-                <h3 class="text-xl font-semibold text-center mb-2">Scalping Strategies</h3>
-                <p class="text-center text-gray-600">
-                    Quick in-and-out strategies for maximizing small price moves. Remember the power of compounding.
-                </p>
-            </div>
-        </a>
-
-        <a href="risk.html">
-            <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
-                <img src="https://img.icons8.com/ios-filled/100/0a1a3f/lock--v1.png" alt="Risk Management"
-                    class="w-16 mx-auto mb-4">
-                <h3 class="text-xl font-semibold text-center mb-2">Risk Management</h3>
-                <p class="text-center text-gray-600">Protect your capital with proven risk management principles.</p>
-            </div>
-        </a>
-
-        <a href="psychology.html">
-            <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
-                <img src="https://img.icons8.com/ios-filled/100/0a1a3f/brain.png" alt="Trading Psychology"
-                    class="w-16 mx-auto mb-4">
-                <h3 class="text-xl font-semibold text-center mb-2">Trading Psychology</h3>
-                <p class="text-center text-gray-600">Learn discipline and emotional control to stay consistent.</p>
-            </div>
-        </a>
-    </div>
-</section>
-
-
-        <!-- Footer / Contact -->
-        <!-- Footer -->
-        <footer class="bg-[#0a1a3f] text-white py-8 text-center">
-            <p class="mb-4">&copy; 2025 SPT Capital Firm. All Rights Reserved.</p>
-            <div class="flex justify-center space-x-6">
-        
-                <!-- About -->
-                <a href="#" class="hover:underline">About</a>
-        
-                <!-- Courses -->
-                <a href="#" class="hover:underline">Courses</a>
-        
-                <!-- Contact -->
-                <a href="#" class="hover:underline">Contact</a>
-            
-        
-                <!-- Instagram -->
-                <a href="https://instagram.com/yourusername" target="_blank"
-                    class="flex items-center space-x-2 hover:text-pink-400">
-                    <i class="fab fa-instagram"></i>
-                    <span>Instagram</span>
-                </a>
-        
-                <!-- WhatsApp -->
-                <a href="https://wa.me/yourphonenumber" target="_blank"
-                    class="flex items-center space-x-2 hover:text-green-400">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>WhatsApp</span>
-                </a>
-            </div>
-        </footer>
-        
-        <!-- FontAwesome for Icons -->
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    </main>
-
-    <!-- Sidebar toggle script -->
     <script>
-        const btn = document.getElementById('hamburger');
-        const b1 = document.getElementById('bar1');
-        const b2 = document.getElementById('bar2');
-        const b3 = document.getElementById('bar3');
-        const panel = document.getElementById('sidebar');
-        const overlay = document.getElementById('overlay');
+        const menuBtn = document.getElementById("menuBtn");
+        const closeBtn = document.getElementById("closeBtn");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
 
-        function openMenu() {
-            panel.classList.remove('-translate-x-full');
-            overlay.classList.remove('hidden');
-            btn.setAttribute('aria-expanded', 'true');
-            b1.classList.add('rotate-45', 'translate-y-[7px]');
-            b2.classList.add('opacity-0');
-            b3.classList.add('-rotate-45', '-translate-y-[7px]');
-            document.body.classList.add('overflow-hidden');
-        }
-        function closeMenu() {
-            panel.classList.add('-translate-x-full');
-            overlay.classList.add('hidden');
-            btn.setAttribute('aria-expanded', 'false');
-            b1.classList.remove('rotate-45', 'translate-y-[7px]');
-            b2.classList.remove('opacity-0');
-            b3.classList.remove('-rotate-45', '-translate-y-[7px]');
-            document.body.classList.remove('overflow-hidden');
-        }
-
-        btn.addEventListener('click', () => {
-            const isOpen = btn.getAttribute('aria-expanded') === 'true';
-            isOpen ? closeMenu() : openMenu();
+        menuBtn.addEventListener("click", () => {
+            sidebar.classList.remove("-translate-x-full");
+            overlay.classList.remove("hidden");
+            setTimeout(() => overlay.classList.add("opacity-100"), 10);
         });
-        overlay.addEventListener('click', closeMenu);
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
 
-        // Close after clicking a nav link
-        document.querySelectorAll('#sidebar a').forEach(a => {
-            a.addEventListener('click', closeMenu);
+        function closeSidebar() {
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.remove("opacity-100");
+            setTimeout(() => overlay.classList.add("hidden"), 500);
+        }
+
+        closeBtn.addEventListener("click", closeSidebar);
+        overlay.addEventListener("click", closeSidebar);
+    </script>
+
+    <!-- ✅ HERO -->
+    <section id="hero" class="relative h-[70vh] flex items-center justify-center text-center">
+        <video id="heroVideo" autoplay muted playsinline class="absolute inset-0 w-full h-full object-cover"></video>
+        <div class="absolute inset-0 bg-black/70"></div>
+
+        <div class="relative z-10 max-w-5xl px-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-yellow-400">
+                Smart Profit Technologies <br /> Invest with Confidence
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8">
+                Research-driven investment Firm that protect capital and unlock opportunities in global markets.
+            </p>
+            <a href="learn.html"
+                class="px-8 py-4 bg-yellow-500 text-black rounded-lg font-semibold hover:bg-yellow-400 transition">
+                Explore More
+            </a>
+        </div>
+    </section>
+
+    <script>
+        const videos = ["stock3.mp4", "stock2.mp4"];
+        let currentVideo = 0;
+        const videoElement = document.getElementById("heroVideo");
+        videoElement.src = videos[currentVideo];
+        videoElement.load();
+        videoElement.play();
+        videoElement.addEventListener("ended", () => {
+            currentVideo = (currentVideo + 1) % videos.length;
+            videoElement.src = videos[currentVideo];
+            videoElement.load();
+            videoElement.play();
         });
     </script>
+
+    <!-- ✅ ABOUT -->
+    <section id="about" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-[#0a1a3f] mb-6">About SPT Capital Firm</h2>
+            <p class="text-gray-700 max-w-3xl mx-auto">
+                SPT Capital Firm is an independent investment firm focused on trading in the global financial markets,
+                with a primary emphasis on Forex and commodities such as gold (XAUUSD).
+                <br /><br />
+                <strong>Our Mission:</strong> To transform capital into sustainable wealth through smart trading and
+                innovation.
+                <br />
+                <strong>Our Vision:</strong> To become a trusted investment partner known for integrity, performance,
+                and long-term value.
+            </p>
+        </div>
+    </section>
+
+    <!-- ✅ MARKET INSIGHTS -->
+    <section id="market" class="py-20 bg-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-[#0a1a3f] mb-12">Today’s Market Insights</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
+                    <i class="fa-solid fa-chart-line text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Gold Outlook</h3>
+                    <p class="text-gray-600">Tracking macro drivers, institutional flows, and global supply-demand
+                        forces shaping XAU/USD.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
+                    <i class="fa-solid fa-coins text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Forex Opportunities</h3>
+                    <p class="text-gray-600">Data-driven strategies to capture opportunities in the most liquid markets
+                        worldwide.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
+                    <i class="fa-solid fa-shield-halved text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Capital Protection</h3>
+                    <p class="text-gray-600">Risk-first approach — protecting client funds while pursuing sustainable
+                        growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ LEARN SECTION -->
+    <section id="learn" class="py-20 px-6 bg-gray-50">
+        <h2 class="text-3xl font-bold text-center text-[#0a1a3f] mb-12">Learn. Trade. Grow.</h2>
+        <div class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <a href="market.html"
+                class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition flex flex-col items-center">
+                <i class="fa-solid fa-chart-pie text-4xl text-blue-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Market Analysis</h3>
+                <p class="text-gray-600 text-center">Master chart reading and spot trends effectively.</p>
+            </a>
+            <a href="scalping.html"
+                class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition flex flex-col items-center">
+                <i class="fa-solid fa-bolt text-4xl text-blue-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Scalping</h3>
+                <p class="text-gray-600 text-center">Quick strategies to maximize short-term moves.</p>
+            </a>
+            <a href="risk.html"
+                class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition flex flex-col items-center">
+                <i class="fa-solid fa-lock text-4xl text-blue-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Risk Management</h3>
+                <p class="text-gray-600 text-center">Protect your capital with proven principles.</p>
+            </a>
+            <a href="psychology.html"
+                class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition flex flex-col items-center">
+                <i class="fa-solid fa-brain text-4xl text-blue-500 mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Psychology</h3>
+                <p class="text-gray-600 text-center">Discipline and mindset for consistent success.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- ✅ FOOTER -->
+    <footer class="bg-[#0a1a3f] text-white py-10">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+            <div>
+                <h3 class="font-bold text-lg mb-2">SPT Capital Firm</h3>
+                <p class="text-sm text-gray-300">Transforming capital into sustainable wealth with precision-driven
+                    trading strategies.</p>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg mb-2">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="about.html" class="hover:text-yellow-400">About Us</a></li>
+                    <li><a href="market.html" class="hover:text-yellow-400">Market Analysis</a></li>
+                    <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg mb-2">Connect</h3>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-yellow-400"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="hover:text-yellow-400"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-xs text-gray-400 mt-8">© 2025 SPT Capital Firm. All Rights Reserved.</p>
+    </footer>
+
 </body>
 
 </html>

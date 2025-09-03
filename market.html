@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Market Analysis | SPT Capital</title>
+    <title>Market Analysis | SPT Capital Firm</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -13,38 +13,42 @@
     <!-- Header -->
     <header class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-6 shadow-lg">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">SPT Capital</h1>
+            <h1 class="text-2xl font-bold">SPT Capital Firm</h1>
             <nav class="space-x-6">
                 <a href="index.html" class="hover:text-yellow-400">Home</a>
-                <a href="learn.html" class="hover:text-yellow-400">Learn</a>
-                <a href="analysis.html" class="text-yellow-400 font-semibold">Market Analysis</a>
-                <a href="about.html" class="hover:text-yellow-400">About</a>
-                <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+                <a href="about.html" class="hover:text-yellow-400 transition">About Us</a>
+                <a href="market.html" class="hover:text-yellow-400 transition">Market Analysis</a>
+                <a href="contact.html" class="hover:text-yellow-400 transition">Contact</a>
+                <a href="learn.html" class="hover:text-yellow-400 transition">Learn</a>
+                <a href="psychology.html" class="hover:text-yellow-400 transition">Psychology</a>
+                <a href="risk.html" class="hover:text-yellow-400 transition">Risk Management</a>
+                <a href="scalping.html" class="hover:text-yellow-400 transition">Scalping</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section
-        class="relative bg-[url('https://images.unsplash.com/photo-1642436994485-73bbdb3f7e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')] bg-cover bg-center h-[350px] flex items-center justify-center">
-        <div class="bg-black/60 p-10 rounded-xl text-center">
-            <h2 class="text-4xl font-bold text-yellow-400">Market Analysis</h2>
-            <p class="text-gray-200 mt-3 max-w-2xl">Insight-driven strategies that go beyond speculation — understanding
-                the forces driving markets at their core.</p>
-        </div>
-    </section>
+    <!-- Video Hero Section -->
+    <section class="relative h-[400px] md:h-[500px] flex items-center justify-center">
+        <!-- Video Background -->
+        <video autoplay muted loop class="absolute w-full h-full object-cover">
+            <source src="stock.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-    <!-- Intro -->
-    <section class="py-16 px-6 max-w-6xl mx-auto text-center">
-        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-            At <span class="font-bold text-gray-900">SPT Capital</span>, market analysis is more than chart-watching —
-            it is the disciplined process of understanding the forces that move financial markets.
-            We blend <span class="text-yellow-500 font-semibold">macro fundamentals</span>, <span
-                class="text-yellow-500 font-semibold">institutional positioning</span>,
-            <span class="text-yellow-500 font-semibold">supply–demand dynamics</span>, and <span
-                class="text-yellow-500 font-semibold">structured risk management</span>
-            to anticipate opportunities rather than react to noise.
-        </p>
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <!-- Content -->
+        <div class="relative text-center px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">Market Analysis in Motion</h2>
+            <p class="text-gray-200 max-w-2xl mx-auto mb-6">
+                Visual insights, live trends, and disciplined strategies — seeing the market from every angle.
+            </p>
+            <a href="contact.html"
+                class="bg-yellow-400 text-blue-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition">
+                Contact Us
+            </a>
+        </div>
     </section>
 
     <!-- Gold Focus -->
@@ -58,8 +62,7 @@
                     flows, and disciplined risk management.
                 </p>
             </div>
-            <img src="https://images.unsplash.com/photo-1624526268955-1a36a0f5bd8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80"
-                alt="Gold Trading" class="rounded-xl shadow-lg">
+            
         </div>
     </section>
 
